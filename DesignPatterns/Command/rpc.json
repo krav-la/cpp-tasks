@@ -1,0 +1,24 @@
+{
+    "commands": [
+        {
+            "method": "getVideoFormat"
+        },
+        {
+            "method": "setVideoFormat",
+            "params": {
+                "width": 1920,
+                "height": 1080,
+                "framerate": 60
+            }
+        },
+        {
+            "method": "startPlayback",
+            "params": {
+                "startTime": 120
+            }
+        },
+        {
+            "method": "stopPlayBack"
+        }
+    ]
+}
