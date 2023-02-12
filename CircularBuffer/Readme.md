@@ -30,10 +30,25 @@ The buffer is considered to be empty when the `head` position is just behind the
 ## Implementation
 Let's see how we can implement such a structure step by step
 ### class CircularBuffer 
-We need to frist create a new class `CircularBuffer` that has the following:
-- A parametrized constructor with one argument holding the buffer size in bytes. Here we allocate new memory for our buffer
+We need to frist create a new class `CircularBuffer` and implement basic buffer operations.
+#### Attributes
 - A pointer to a dynamically allocated buffer
-- A destructor to deallocate memory when the buffer object is destroyed
+- Buffer max length in bytes
+- Size of occupied space in bytes
 - Two pointers to keep track of our data. The `tail` and the `head`
+#### Methods
+| Method| Description|
+|---	|---	|
+|Default Constructor | Creates a new buffer of size 0|
+| Parametrized Constructor	|  A parametrized constructor with one argument holding the buffer size in bytes. Here we allocate new memory for our buffer 	|
+| Destructor | Deallocates memory when the buffer object is destroyed |
+| resize | Resizes the existing buffer |
+| empty | Checks whether a buffer is empty or not |
+| push | Inserts a new element. If the buffer is full the method doesn't do anything |
+| size | Returns available size in bytes |
+| capacity | Returns max buffer capacity in bytes |
+| clear | Frees all memory and sets the size and capacity to 0|
+
+
 
 
