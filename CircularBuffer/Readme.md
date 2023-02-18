@@ -40,7 +40,11 @@ We need to frist create a new class `CircularBuffer` and implement basic buffer 
 | Method| Description|
 |---	|---	|
 |Default Constructor | Creates a new buffer of size 0|
-| Parametrized Constructor	|  A parametrized constructor with one argument holding the buffer size in bytes. Here we allocate new memory for our buffer 	|
+| Parametrized Constructor	|  A parametrized constructor with one argument holding the buffer size in bytes. Here we allocate new memory for our buffer|
+|Copy constructor | Copies data from an existing object at initialization|
+|Move constructor | Moves data from a temporary object |
+|Copy assignment operator | Assigns a new object with copy semantics |
+|Move assignment operator | Assigns a new object with move semantics |
 | Destructor | Deallocates memory when the buffer object is destroyed |
 | resize | Resizes the existing buffer |
 | empty | Checks whether a buffer is empty or not |
