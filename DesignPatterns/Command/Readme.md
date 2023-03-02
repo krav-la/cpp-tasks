@@ -1,4 +1,4 @@
-# Command Design Pattern
+# Command
 ## Input data
 
 You can find the list of requests (commands) to a web media player in  `rpc.json`
