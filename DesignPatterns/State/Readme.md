@@ -27,6 +27,13 @@ The first column and row contain states to transit from and to respectively.
 
 We keep transition events in row and column intersections. So if the Hero is in the Run state and the run button is released the state is changed to Idle.
 
+## Gun State Machine
+|   	    |Idle	            |Shooting           |Reloading          |
+|---	    |---	            |---	            |---                |
+|Idle  	    |x   	            |Fire pressed       |Reload key pressed |
+|Shooting   |Fire released      |x   	            |Reload key pressed |
+|Reloading  |Reload finished    |Fire pressed       |x                  |
+
 ## References
 - [Refactoring Guru. State](https://refactoring.guru/design-patterns/state)
 - [SOLID Design Principles](https://hackernoon.com/10-oop-design-principles-every-programmer-should-know-f187436caf65)
