@@ -45,7 +45,7 @@ All transitions are caused by keyboard events. This could be described as follow
 |Idle  	    |x   	            |Fire pressed       |Reload key pressed |
 |Shooting   |Fire released      |x   	            |Reload key pressed |
 |Reloading  |Reload finished    |Fire pressed       |x                  |
-## Events
+### Events
 We can use enum to hold a unique constant for every possible keyboard event
 
 ```
@@ -56,7 +56,7 @@ enum class Event
     ...
 }
 ```
-## Abstract State
+### Abstract State
 First we need to create an abstract class for all possible states.
 It should have the following methods:
 |Method      |Description                                               |
@@ -67,15 +67,18 @@ It should have the following methods:
 |exitAction  | Does actions required to do at the state exit            |
 
 Initial state is set at an object construction
-## Concrete States
+### Concrete States
 All concrete states are derived from an abstract state and implement its interface
 
-## State Machine
+### State Machine
 State machine should keep its current state and change it to a new state whenever a new transition happens.
 Besides that there should be at least two methods. One for handling incoming events and changing states. And the second to do repeated actions done by the current state.
 
-## Hero Example
+### Hero Example
 As an example you can use a Hero state machine implemented in `Hero.h` and `Hero.cpp`
+
+## Improvement Task
+- Get rid of raw pointers
 
 ## References
 - [Refactoring Guru. State](https://refactoring.guru/design-patterns/state)
