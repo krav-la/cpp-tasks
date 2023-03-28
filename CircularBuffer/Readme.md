@@ -49,6 +49,7 @@ We need to frist create a new class `CircularBuffer` and implement basic buffer 
 | resize | Resizes the existing buffer |
 | empty | Checks whether a buffer is empty or not |
 | push | Inserts a new element. If the buffer is full the method doesn't do anything |
+| pop | Reads an existing element from tail |
 | size | Returns available size in bytes |
 | capacity | Returns max buffer capacity in bytes |
 | clear | Frees all memory and sets the size and capacity to 0|
